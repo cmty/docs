@@ -163,7 +163,8 @@ module.exports = {
     scheme: 'session',
     model: 'App/Models/User',
     uid: 'email',
-    password: 'password'
+    password: 'password',
+    headerKey: 'authorization'
   }
 }
 ----
@@ -177,6 +178,7 @@ module.exports = {
 | password | Database field name | Field used to verify the user password.
 | model | Model namespace (`lucid` only) | Model used to query the database, applicable only when using the `lucid` serializer.
 | table | Database table name (`database` only) | Applicable only when using the `database` serializer.
+| headerKey | Header key (default: `authorization`) | Used to get the token from the header.
 |====
 
 === Session Methods
